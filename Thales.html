@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Présentation du projet d’amélioration de l’interface graphique de test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+        }
+        .section {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .section h2 {
+            color: #4CAF50;
+        }
+        .section img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>PAutomatet</h1>
+    </header>
+    <div class="container">
+        <div class="section">
+            <h2>Description du Projet</h2>
+            <p>Le projet concerne le pilotage d'un convoyeur à l'aide d'un automate Siemens S7-1200, destiné à transférer des pièces jusqu'à l'espace de travail du robot, détectées par un capteur C1. La mise sous tension du système est assurée par un interrupteur S1, accompagné d'une signalisation H1. Le cycle de fonctionnement débute lorsque l'opérateur appuie sur le bouton de marche, maintenant ainsi le convoyeur en fonctionnement jusqu'à ce que le bouton d'arrêt soit actionné, signalé par le voyant H2. Le convoyeur s'arrête automatiquement lorsqu'un objet est détecté par le capteur C1 et redémarre une fois que l'objet n'est plus détecté. L'arrêt manuel du convoyeur peut être effectué via les boutons-poussoirs Ar et Aru, nécessitant une réactivation par le bouton Ma pour redémarrer.
+
+                Le projet inclut également la réalisation du schéma de l'armoire électrique, la logique combinatoire, la programmation Ladder avec Tia Portal, le câblage de l'armoire, ainsi que des améliorations telles que le mode automatique/manuel et un compteur. Enfin, la programmation en Grafcet avec Zelio est également prévue.
+            </p>
+        </div>
+        <div class="section">
+            <h2>Cahier des charges</h2>
+            <p>1. L'objectif est de développer une bibliothèque d'objet en JavaScript qui permettra à l'utilisateur de créer des formes géométriques personnalisées :</p>
+            <ul>
+                <li>Une croix positionnable avec des options de personnalisation (taille, couleur, épaisseur).</li>
+                <li>Faire une forme géométrique à partir de la partie utilisateur.</li>
+                <li>Un cylindreOffsett qui pourra être décalé en hauteur et bas.</li>
+                <li>Un Billboard, une image qui est une phrase en 2D qui s’affichera.</li>
+            </ul>
+            <p>2. Fonctionnalités :</p>
+            <ul>
+                <li>Créer des formes géométriques personnalisées horizontales via la méthode "shapeGeometry".</li>
+                <li>Ajouter une croix personnalisable (taille, couleur, épaisseur) positionnable à l'aide de la méthode "crossShape".</li>
+                <li>Créer un cylindre avec décalage en hauteur personnalisable (BottomHeight, TopHeight) via la méthode "cylinderOffset".</li>
+                <li>Ajouter une phrase via l’utilisation de Billboard.</li>
+            </ul>
+            <p>3. Contraintes techniques :</p>
+            <ul>
+                <li>Être développée en JavaScript.</li>
+                <li>Être compatible avec les navigateurs web courants (Chrome, Firefox, Safari, Edge).</li>
+                <li>Respecter les normes de codage et de documentation pour faciliter la maintenance et l'évolution future.</li>
+                <li>Fournir une documentation claire et complète.</li>
+            </ul>
+            <p>4. Délais :</p>
+            <ul>
+                <li>Le développement de la bibliothèque devra être effectué dans un délai de 1 mois à partir de la validation du cahier des charges.</li>
+            </ul>
+            <p>5. Maintenance et évolution :</p>
+            <ul>
+                <li>La bibliothèque devra être maintenue et évolutive.</li>
+                <li>Une formation pour l'utilisation et la mise à jour régulière de la bibliothèque sera prévue.</li>
+                <li>Des mises à jour régulières devront être effectuées pour assurer la compatibilité avec les nouvelles versions de navigateurs web et les nouvelles technologies.</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Fonctionnement</h2>
+            <p>Prenons un exemple qui est le cylindre parmis toute les figures. Dans la bibliothèque THREE.JS il y existe différentes figures déjà faite dont une qui est un cylindre mais comme écrit dans le cahier des charges on ne me demande pas un simple cylindre on me demande de faire un cylindre qui a pour but de pouvoir être modifier en « haut » et en « bas ». En effet le cylindre donner par THREE.JS a la possibilité d’être modifier en taille mais celui-ci est modifier en fonction de la taille écrite je m’explique. Lorsque nous donnons une taille à notre cylindre il divise cette somme et la met de chaque coter de l’endroit où le cylindre est placer donc la position initiale du cylindre. Mais dans mon cahier des charges on me demande de faire un cylindre avec une position mais je dois pouvoir changer le coter bas du cylindre et celui du haut sans devoir toucher la position.   Donc voici le fonctionnement:</p>
+            <img src="dark-creative/img/thales3D.jpg" alt="Schéma de fonctionnement du robot Thales">
+            <img src="dark-creative/img/thalescode.jpg" alt="Schéma de fonctionnement du robot Thales">
+        </div>
+        <div class="section">
+            <h2>Conclusion</h2>
+            <p>Au cours des neuf semaines passées dans l'entreprise de Thales, j'ai acquis une expérience précieuse et des connaissances pratiques dans le domaine de la programmation. J'ai eu la chance de travailler sur plusieurs projets intéressants, en utilisant des technologies variées, ce qui m'a permis de renforcer mes compétences en programmation et de découvrir de nouvelles méthodes de travail.
+                Au fil des semaines, j'ai appris à travailler en autonomie et à collaborer avec des collègues ayant des expériences et des compétences différentes des miennes. J'ai également été initié à l'utilisation d'outils tels que Git, ce qui a grandement facilité la gestion de projet.
+                En outre, j'ai eu la chance de travailler avec des clients et de développer mes compétences en communication et en gestion de projet. Cela m'a permis de mieux comprendre les besoins des clients et de leur offrir des solutions adaptées.
+                En somme, ce stage a été une expérience très enrichissante, tant sur le plan professionnel que personnel. J'ai acquis de nouvelles compétences, renforcé mes connaissances en programmation et en entreprise dans un environnement professionnel stimulant. Je suis reconnaissant envers Thales et les personnes avec lesquelles j'ai travaillé pour cette opportunité de stage enrichissante.
+                </p>
+        </div>
+    </div>
+</body>
+</html>

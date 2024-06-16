@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet de Suiveur de Ligne avec Robot Niryo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+        }
+        .section {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .section h2 {
+            color: #4CAF50;
+        }
+        .section img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px 0;
+        }
+        .section video {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Projet de Suiveur de Ligne avec Robot Niryo</h1>
+    </header>
+    <div class="container">
+        <div class="section">
+            <h2>Description du Projet</h2>
+            <p>L'objectif de cette Session de SAE est de prendre en main le fonctionnement du robot Nyrio-NED 2 ainsi que du convoyeur, en vue de mettre en place leur pilotage à travers une carte Arduino et le logiciel Nyrio Studio. Cette démarche vise à établir une relation de type "maître/esclave" entre la carte Arduino et le système constitué du bras robotique et du convoyeur.</p>
+            <p>Le cœur de cette mission réside dans la réalisation d'une tâche de type "Pick and Place", consistant à saisir des pièces transportées par le convoyeur et à les déplacer habilement à l'aide du bras du NED 2 vers un contenant prédéfini. Cette approche s'inscrit dans une perspective d'automatisation et d'optimisation des opérations de manipulation, démontrant la synergie entre les différentes composantes robotiques. Ce compte rendu détaillera les étapes clés du processus, du contrôle des dispositifs individuels à la coordination harmonieuse entre le bras robotique et le convoyeur, offrant ainsi un aperçu complet du développement et de l'intégration de ce système complexe.</p>
+            <img src="dark-creative/img/niryointro.jpg" alt="Image du robot Niryo">
+        </div>
+        <div class="section">
+            <h2>Vidéo du Projet</h2>
+            <video controls>
+                <source src="dark-creative/img/niryo_electro_conveyor.mp4" type="video/mp4">
+                Votre navigateur ne supporte pas la lecture de vidéo.
+            </video>
+        </div>
+        <div class="section">
+            <h2>Fonctionnement</h2>
+            <p><strong>Robot Niryo NED 2 :</strong></p>
+            <ul>
+                <li><strong>Caractéristiques :</strong> Bras robotique avec 6 axes de rotation et une pince pour saisir des objets.</li>
+                <li><strong>Programmation :</strong> Peut être programmée via Niryo Studio, Arduino, et des langages comme Python.</li>
+                <li><strong>Fonctionnalités Avancées :</strong> Équipé d'une caméra pour la reconnaissance d'objets et le tri basé sur la couleur et la forme.</li>
+            </ul>
+            <p><strong>Convoyeur :</strong></p>
+            <ul>
+                <li><strong>Fonction :</strong> Transporte les pièces vers le robot.</li>
+                <li><strong>Contrôle :</strong> Peut être contrôlé par le logiciel du fabricant ou via Arduino.</li>
+                <li><strong>Capteur IR :</strong> Détecte la présence des pièces et arrête le convoyeur pour permettre au robot de les saisir.</li>
+            </ul>
+            <p><strong>Modes de Fonctionnement</strong></p>
+            <p><strong>Mode 1 :</strong></p>
+            <ul>
+                <li><strong>Contrôle Autonome :</strong> Le convoyeur est contrôlé par une control box.</li>
+                <li><strong>Processus :</strong> Le capteur IR détecte une pièce, arrête le convoyeur, et le robot effectue l'opération de Pick and Place.</li>
+            </ul>
+            <p><strong>Mode 2 :</strong></p>
+            <ul>
+                <li><strong>Pilotage par le Robot :</strong> Le convoyeur est contrôlé directement par des blocs fonctionnels du robot.</li>
+                <li><strong>Processus :</strong> Le robot contrôle le mouvement du convoyeur et réalise les tâches de Pick and Place via ses blocs fonctionnels.</li>
+            </ul>
+            <p><strong>Mode 3 :</strong></p>
+            <ul>
+                <li><strong>Interface Arduino :</strong> Utilisation d'une carte Arduino-Uno pour piloter simultanément le NED 2 et le convoyeur.</li>
+                <li><strong>Processus :</strong> L'Arduino contrôle le démarrage et l'arrêt du convoyeur, surveille les obstacles via le capteur IR, et déclenche les tâches de Pick and Place.</li>
+            </ul>
+            <img src="chemin/vers/votre/image3.jpg" alt="Schéma de fonctionnement du robot Niryo">
+        </div>
+        <div class="section">
+            <h2>Conclusion</h2>
+            <p>En conclusion, cette SAE s'achève avec succès, marquant une étape significative dans la maîtrise du robot Nyrio-NED 2 et du convoyeur, ainsi que dans la mise en place de leur pilotage via une carte Arduino et le logiciel Nyrio Studio. L'établissement d'une relation de type "maître/esclave" entre la carte Arduino et le système, composé du bras robotique et du convoyeur.</p>
+            <p>Au cœur de cette mission se trouve la réalisation accomplie d'une tâche de type "Pick and Place", démontrant avec habileté la saisie précise de pièces transportées par le convoyeur et leur déplacement à l'aide du bras du NED 2 vers un contenant prédéfini. La difficulté a été la prise en main des différents logiciels notamment la programmation par bloque fonctionnel ainsi que les disfonctionnements matériels qui nous a permis de collaborer avec d’autre groupe.</p>
+            <p>Le compte rendu exhaustif présenté ici a méticuleusement documenté chaque étape clé du processus, de la manipulation des dispositifs individuels à la coordination entre le bras robotique et le convoyeur. Cette documentation complète offre un aperçu détaillé du développement et de l'intégration de ce système complexe, soulignant la réussite de notre binôme dans la réalisation de ce projet.</p>
+            <p>En clôture, nous tenons à exprimer notre profonde gratitude envers notre enseignant, qui, par son encadrement et son expertise, a rendu possible le succès de cette SAE. Sa passion pour l'enseignement et sa volonté de nous apprendre. Nous reconnaissons l'importance de cette expérience dans notre formation et sommes reconnaissants de l'opportunité qui nous a été offerte. Ce succès ne fait que renforcer notre engagement envers l'apprentissage continu et l'application pratique des connaissances acquises.</p>
+        </div>
+    </div>
+</body>
+</html>
